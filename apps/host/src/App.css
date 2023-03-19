@@ -5,8 +5,12 @@
     text-align: center;
 }
 
-.panel {
+.host {
     background: #d1d1d1;
+    padding: 32px;
+}
+
+.panel {
     padding: 20px;
 }
 
