@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
+  "replace-for-compiled-main": "./dist/index.js",
+  "replace-for-compiled-types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint *.ts*",
+    "add-for-compiled-dev": "tsc --watch --outDir dist",
+    "add-for-compiled-build": "tsc --outDir dist"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
