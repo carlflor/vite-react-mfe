@@ -19,6 +19,12 @@ export class CounterStore {
     count = 0;
 
     constructor() {
+        const cachedCount = window.localStorage.getItem("count");
+
+        if (cachedCount && cachedCount !== "") {
+            this.count = Number(cachedCount);
+        }
+
         makeObservable(this, {
             count: observable,
             incrementCount: action,
@@ -27,6 +33,7 @@ export class CounterStore {
 
     incrementCount = () => {
         this.count += 1;
+        window.localStorage.setItem("count", `${this.count}`);
     };
 }
 
