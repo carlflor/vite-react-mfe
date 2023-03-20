@@ -18,6 +18,7 @@ The apps both render the button and share state via the Mobx store.
 To develop all apps and packages, run the following command:
 
 ```
+pnpm install turbo --global
 pnpm install
 pnpm dev
 ```
